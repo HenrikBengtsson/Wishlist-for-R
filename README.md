@@ -47,6 +47,9 @@ Note: The `R.utils::dimNA()` function implements this.
 
 * _Support URLs_ in addition to local files when calling `R -f` or `Rscript`, e.g. `Rscript http://callr.org/install#MASS`.
 
+* _Package scripts_ via `R CMD`, e.g. `R CMD R.rsp::rfile`, which calls script `rfile.R` in `system.file("bin", package="R.rsp")` iff it exists.  Also, if package is not explicitly specified, the `bin` directory of all packages should be scanned, e.g. `R CMD rfile`. 
+
+
 ### Package and package libraries
 
 * The _system-library directory should be read only_ after installing R and/or not accept installation of non-base packages.  If installation additional packages there, an end-user is forced to have those package on their library path.  Better is to install any additional site-wide packages in a site-wide library, cf. `.Library.site` and `R_LIBS_SITE`.  This way the user can choose to include the site-wide library/libraries or not.
