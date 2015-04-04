@@ -39,7 +39,7 @@ List of features and modification I would love to see in R:
 Note: The `R.utils::dimNA()` function implements this.
 
 ## Graphics
-* Add support for
+* _Support for one-sided plot limits_, e.g. `plot(5:10, xlim=c(0,+Inf))` where `xlim[2]` is inferred from data, cf. `xlim=NULL`.
 
 ## R system and configuration
 
