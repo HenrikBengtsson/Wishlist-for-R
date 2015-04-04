@@ -57,7 +57,7 @@ Note: The `R.utils::dimNA()` function implements this.
 
 * The _system-library directory should be read only_ after installing R and/or not accept installation of non-base packages.  If installation additional packages there, an end-user is forced to have those package on their library path.  Better is to install any additional site-wide packages in a site-wide library, cf. `.Library.site` and `R_LIBS_SITE`.  This way the user can choose to include the site-wide library/libraries or not.
 
-* _One package library per repository_*, e.g. `~/R/library/3.1/CRAN/`, `~/R/library/3.1/Bioconductor/`, and  `~/R/library/3.1/R-Forge/`.  This way it is easy to include/exclude complete sets of packages. `install.packages()` should install packages to the corresponding directory, cf. how `update.packages()` updates packages where they lives (I think).
+* _One package library per repository_, e.g. `~/R/library/3.1/CRAN/`, `~/R/library/3.1/Bioconductor/`, and  `~/R/library/3.1/R-Forge/`.  This way it is easy to include/exclude complete sets of packages. `install.packages()` should install packages to the corresponding directory, cf. how `update.packages()` updates packages where they lives (I think).
 
 
 
