@@ -29,7 +29,7 @@ print(x[,2:3])
 
 ## Calling R
 
-* Support URLs in addition to local files when calling `R -f` or `Rscript`, e.g. `Rscript http://callr.org/install#MASS`.
+* _Support URLs_ in addition to local files when calling `R -f` or `Rscript`, e.g. `Rscript http://callr.org/install#MASS`.
 
 ## Package and package libraries
 
