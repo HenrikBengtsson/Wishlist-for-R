@@ -10,7 +10,7 @@ List of features and modification I would love to see in R:
 ```r
 > x <- matrix(1:12, ncol=4)
 > colnames(x) <- c("A", "B", "C", "D")
-> colattr(x, 'gender') <- c("male", "male",  "female", "male")
+> colattr(x, 'gender') <- c("male", "male", "female", "male")
 > x
 
      male male female male
