@@ -36,7 +36,7 @@ List of features and modification I would love to see in R:
 > dim(x)
 [1] 4 3
 ```
-Note: The `R.utils::dimNA()` function implements this.
+Comment: The `R.utils::dimNA()` function implements this.
 
 
 ## Evaluation
@@ -46,7 +46,7 @@ Note: The `R.utils::dimNA()` function implements this.
 ## Graphics
 * _Support for one-sided plot limits_, e.g. `plot(5:10, xlim=c(0,+Inf))` where `xlim[2]` is inferred from data, cf. `xlim=NULL`.
 
-* _Standardized graphics device settings and API_.  For instance, we have `ps.options()` but no `png.options()`.  For some devices we can set the default width and height, whereas for others the defaults are hardwired to the arguments of the device function.  Note: The `R.devices` package tries to work around this.
+* _Standardized graphics device settings and API_.  For instance, we have `ps.options()` but no `png.options()`.  For some devices we can set the default width and height, whereas for others the defaults are hardwired to the arguments of the device function.  Comment: The `R.devices` package tries to work around this.
 
 
 ## R system and configuration
