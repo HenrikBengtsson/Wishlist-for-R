@@ -55,7 +55,7 @@ Comment: The `R.utils::dimNA()` function implements this.
 
 * _Support URLs_ in addition to local files when calling `R -f` or `Rscript`, e.g. `Rscript http://callr.org/install#MASS`.
 
-* _Package scripts_ via `Rscript R.rsp::rfile`, which calls script `rfile.R` in `system.file("bin", package="R.rsp")` iff it exists.  Similarly for `R CMD`, e.g. `R CMD R.rsp::rfile`.  Also, if package is not explicitly specified, the `bin` directory of all packages should be scanned (only for `R CMD`), e.g. `R CMD rfile`. 
+* _Package scripts_ via `Rscript R.rsp::rfile`, which calls script `rfile.R` in `system.file("exec", package="R.rsp")` iff it exists.  Similarly for `R CMD`, e.g. `R CMD R.rsp::rfile`.  Also, if package is not explicitly specified, the `exec` directory of all packages should be scanned (only for `R CMD`), e.g. `R CMD rfile`. 
 
 
 ### Package and package libraries
