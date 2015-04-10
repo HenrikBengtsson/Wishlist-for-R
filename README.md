@@ -6,6 +6,8 @@ List of features and modification I would love to see in R:
 
 ## Basic data types
 
+* Internal _`HASNA(x)` flag_ indicating whether `x` has missing values (`HASNA=1`) or not (`HASNA=0`), or it is unknown (`HASNA=2`).  This flag can be set by any function that have scanned `x` for missing values.  This would allow functions to skip expensive testing for missing values whenever `HASNA=0`.
+
 * Generic support for _dimension-aware attributes_ that are acknowledged whenever the object is subsetted.  For vectors we have `names()`, for matrices and data frames we have `rownames()` and `colnames()`, and for arrays and other objects we have `dimnames()`.  Prototype:
 ```r
 > x <- matrix(1:12, ncol=4)
