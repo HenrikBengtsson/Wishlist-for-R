@@ -60,11 +60,23 @@ Comment: The `R.utils::dimNA()` function implements this.
 * _Package scripts_ via `Rscript R.rsp::rfile`, which calls script `rfile.R` in `system.file("exec", package="R.rsp")` iff it exists.  Similarly for `R CMD`, e.g. `R CMD R.rsp::rfile`.  Also, if package is not explicitly specified, the `exec` directory of all packages should be scanned (only for `R CMD`), e.g. `R CMD rfile`. 
 
 
-### Package and package libraries
+### Packages, libraries and repositories
 
 * The _system-library directory should be read only_ after installing R and/or not accept installation of non-base packages.  If installation additional packages there, an end-user is forced to have those package on their library path.  Better is to install any additional site-wide packages in a site-wide library, cf. `.Library.site` and `R_LIBS_SITE`.  This way the user can choose to include the site-wide library/libraries or not.
 
 * _One package library per repository_, e.g. `~/R/library/3.1/CRAN/`, `~/R/library/3.1/Bioconductor/`, and  `~/R/library/3.1/R-Forge/`.  This way it is easy to include/exclude complete sets of packages. `install.packages()` should install packages to the corresponding directory, cf. how `update.packages()` updates packages where they lives (I think).
+
+* _Repository metadata_* that provides information about a repository.  This can be provide as a DCF file `REPOSITORY` in the root of the repository URL, e.g. `http://cran.r-project.org/REPOSITORY` and `http://www.bioconductor.org/packages/release/bioc/REPOSITORY`.  The content of `REPOSITORY` could be:
+```
+Repository: BioCsoft_3.1
+Title: Bioconductor release Software repository
+Description: R package repository for Bioconductor release 3.1 branch.
+Maintainer: Bioconductor Webmaster <webmaster@bioconductor.org>
+IsMirror: TRUE
+MirrorSource: http://www.bioconductor.org/packages/release/bioc
+SeeAlso: http://www.bioconductor.org/about/mirrors/mirror-how-to/
+```
+
 
 
 
