@@ -51,6 +51,9 @@ Comment: The `R.utils::dimNA()` function implements this.
 * _Standardized graphics device settings and API_.  For instance, we have `ps.options()` but no `png.options()`.  For some devices we can set the default width and height, whereas for others the defaults are hardwired to the arguments of the device function.  Comment: The `R.devices` package tries to work around this.
 
 
+## Files
+* _Atomic writing to file_ to avoid incomplete/corrupt files being written.  This can be achieved by writing to a temporary file/directory and the renaming when writing/saving is complete.  This can be made optional, e.g. `saveRDS(x, file="foo.rds", atomic=TRUE)`.
+
 ## R system and configuration
 
 ### Calling R
