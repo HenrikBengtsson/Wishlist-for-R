@@ -70,6 +70,7 @@ Comment: The `R.utils::dimNA()` function implements this.
 ```
 Repository: BioCsoft_3.1
 Title: Bioconductor release Software repository
+Depends: R (>= 3.2.0)
 Description: R package repository for Bioconductor release 3.1 branch.
 Maintainer: Bioconductor Webmaster <webmaster@bioconductor.org>
 IsMirror: TRUE
