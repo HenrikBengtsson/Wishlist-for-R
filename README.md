@@ -73,9 +73,9 @@ Title: Bioconductor release Software repository
 Depends: R (>= 3.2.0)
 Description: R package repository for Bioconductor release 3.1 branch.
 Maintainer: Bioconductor Webmaster <webmaster@bioconductor.org>
-IsMirror: TRUE
-MirrorSource: http://www.bioconductor.org/packages/release/bioc
+URL: http://www.bioconductor.org/packages/release/bioc
 SeeAlso: http://www.bioconductor.org/about/mirrors/mirror-how-to/
+IsMirror: TRUE
 ```
 
 
