@@ -71,7 +71,7 @@ Comment: The `R.utils::dimNA()` function implements this.
 
 * _One package library per repository_, e.g. `~/R/library/3.1/CRAN/`, `~/R/library/3.1/Bioconductor/`, and  `~/R/library/3.1/R-Forge/`.  This way it is easy to include/exclude complete sets of packages. `install.packages()` should install packages to the corresponding directory, cf. how `update.packages()` updates packages where they lives (I think).
 
-* _Repository metadata_* that provides information about a repository.  This can be provide as a DCF file `REPOSITORY` in the root of the repository URL, e.g. `http://cran.r-project.org/REPOSITORY` and `http://www.bioconductor.org/packages/release/bioc/REPOSITORY`.  The content of `REPOSITORY` could be:
+* _Repository metadata_ that provides information about a repository.  This can be provide as a DCF file `REPOSITORY` in the root of the repository URL, e.g. `http://cran.r-project.org/REPOSITORY` and `http://www.bioconductor.org/packages/release/bioc/REPOSITORY`.  The content of `REPOSITORY` could be:
 ```
 Repository: BioCsoft_3.1
 Title: Bioconductor release Software repository
