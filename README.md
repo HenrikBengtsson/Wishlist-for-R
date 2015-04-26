@@ -64,6 +64,9 @@ Comment: The `R.utils::dimNA()` function implements this.
  
 * `R CMD check --flavor=<flavor>`: Instead of hard-coded tests as in `R CMD check --as-cran`, support for custom test suits, which themselves could be R packages, e.g. `R CMD check --flavor=CRAN` (R package `check.CRAN`) and `R CMD check --flavor=Bioconductor` `check.Bioconductor`).  In the bigger picture, this will separate R core and CRAN.
 
+### Exception handling and core dumps
+
+* Use `An unexpected error occurred that could not be recovered from. R session is aborting ...` instead of just `aborting ...`, because from the latter it is [not always clear](https://github.com/HenrikBengtsson/R.devices/issues/7) where that messages comes from, i.e. it could have been outputted by something else.
 
 ### Packages, libraries and repositories
 
