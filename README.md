@@ -45,6 +45,11 @@ Comment: The `R.utils::dimNA()` function implements this.
 
 * `value <- sandbox(...)` which analogously to `evalq(local(...))` evaluates an R expression but without leaving any side effects and preserving all options, environments, connections sinks, graphics devices, etc.  The effect should be as evalutating the expression in a separate R processing (after importing global variables and loading packages) and returning the value to the calling R process.
 
+* `source(..., args=...)` - pass / override command-line arguments when calling `source()`.
+
+* `rscript(..., args=...)` - run an R script (with command-line arguments) in a separate process (via `system()`).
+
+
 ## Graphics
 * _Support for one-sided plot limits_, e.g. `plot(5:10, xlim=c(0,+Inf))` where `xlim[2]` is inferred from data, cf. `xlim=NULL`.
 
