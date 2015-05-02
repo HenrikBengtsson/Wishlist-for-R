@@ -59,6 +59,12 @@ Comment: The `R.utils::dimNA()` function implements this.
 ## Files
 * _Atomic writing to file_ to avoid incomplete/corrupt files being written.  This can be achieved by writing to a temporary file/directory and the renaming when writing/saving is complete.  This can be made optional, e.g. `saveRDS(x, file="foo.rds", atomic=TRUE)`.
 
+## Basic classes
+* A simple class for files, e.g. `pathname <- p("R/zzz.R")` and `pathnames <- p("R/000.R", "R/zzz.R")`.  More over, for instance, `pathnames <- dir("R/")` should effectively return `pathnames <- p(dir("R/"))`.
+
+* A simple class for regular expressions, e.g. `gsub(re("^[a-z]+"), x)`.  Also fixed expression, e.g. `gsub(fe("(abc)"), x)`.
+
+
 ## R system and configuration
 
 ### Calling R
