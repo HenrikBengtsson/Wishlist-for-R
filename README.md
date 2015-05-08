@@ -77,7 +77,7 @@ Comment: The `R.utils::dimNA()` function implements this.
 
 ### Exception handling and core dumps
 
-* Use `An exceptional error occurred that R could not recovered from. The R session is now aborting ...` instead of just [`aborting ...`](https://github.com/wch/r-source/blob/1d00fef90e4a1026ccc62776c8805cc20129ce88/src/main/main.c#L594), because from the latter it is [not always clear](https://github.com/HenrikBengtsson/R.devices/issues/7) where that messages comes from, i.e. it could have been outputted by something else.
+* Use `An exceptional error occurred that R could not recover from. The R session is now aborting ...` instead of just [`aborting ...`](https://github.com/wch/r-source/blob/1d00fef90e4a1026ccc62776c8805cc20129ce88/src/main/main.c#L594), because from the latter it is [not always clear](https://github.com/HenrikBengtsson/R.devices/issues/7) where that messages comes from, i.e. it could have been outputted by something else.
 
 ### Packages, libraries and repositories
 
