@@ -62,7 +62,7 @@ Comment: The `R.utils::dimNA()` function implements this.
 ## Basic classes
 * A simple class for files, e.g. `pathname <- p("R/zzz.R")` and `pathnames <- p("R/000.R", "R/zzz.R")`.  More over, for instance, `pathnames <- dir("R/")` should effectively return `pathnames <- p(dir("R/"))`.
 
-* A simple class for regular expressions, e.g. `gsub(re("^[a-z]+"), x)`.  Also fixed expression, e.g. `gsub(fe("(abc)"), x)`.
+* A simple class for regular expressions, e.g. `gsub(re("^[a-z]+"), x)`.  Also fixed expression, e.g. `gsub(fe("(abc)"), x)`.  This will allow for things such as using `x[re("a.a")]` to get subset `x[c("aba", "aea")]`.
 
 
 ## R system and configuration
