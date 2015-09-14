@@ -50,7 +50,7 @@ Comment: The `R.utils::dimNA()` function implements this.
 
 * `source(..., args=...)` - pass / override command-line arguments when calling `source()`.
 
-* `rscript(..., args=...)` - run an R script (with command-line arguments) in a separate process (via `system()`).
+* `rscript(..., args=...)` - run an R script (with command-line arguments) in a separate process (via `system()`).  Should (optionally?) preserve the same setup (e.g. .libPaths(), options(), ...) as the calling R session.
 
 ## Graphics
 * _Support for one-sided plot limits_, e.g. `plot(5:10, xlim=c(0,+Inf))` where `xlim[2]` is inferred from data, cf. `xlim=NULL`.
