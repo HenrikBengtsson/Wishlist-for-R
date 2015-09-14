@@ -41,6 +41,9 @@ List of features and modification I would love to see in R:
 Comment: The `R.utils::dimNA()` function implements this.
 
 
+## Function calls
+* Explicitly specify an argument as "missing".  For instance, calling `foo(x=missing())` should resolve `missing(x)` as `TRUE`.  Comment: See [PSCBS discussion](https://github.com/HenrikBengtsson/matrixStats/issues/22).
+
 ## Evaluation
 
 * `value <- sandbox(...)` which analogously to `evalq(local(...))` evaluates an R expression but without leaving any side effects and preserving all options, environments, connections sinks, graphics devices, etc.  The effect should be as evalutating the expression in a separate R processing (after importing global variables and loading packages) and returning the value to the calling R process.
