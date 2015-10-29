@@ -42,7 +42,7 @@ Comment: The `R.utils::dimNA()` function implements this.
 
 
 ## Function calls
-* Explicitly specify an argument as "missing".  For instance, calling `foo(x=missing())` should resolve `missing(x)` as `TRUE`.  Comment: See [PSCBS discussion](https://github.com/HenrikBengtsson/matrixStats/issues/22).
+* Explicitly specify an argument as "missing".  For instance, calling `foo(x=missing())` should resolve `missing(x)` as `TRUE`.  Comment: See [matrixStats discussion](https://github.com/HenrikBengtsson/matrixStats/issues/22).
 
 ## Evaluation
 
