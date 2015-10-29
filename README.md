@@ -73,8 +73,8 @@ Comment: The `R.utils::dimNA()` function implements this.
 
 * _Support URLs_ in addition to local files when calling `R -f` or `Rscript`, e.g. `Rscript http://callr.org/install#MASS`.
 
-* _Package scripts_ via `Rscript R.rsp::rfile`, which calls script `rfile.R` in `system.file("exec", package="R.rsp")` iff it exists.  Similarly for `R CMD`, e.g. `R CMD R.rsp::rfile`.  Also, if package is not explicitly specified, the `exec` directory of all packages should be scanned (only for `R CMD`), e.g. `R CMD rfile`. 
- 
+* _Package scripts_ via `Rscript R.rsp::rfile`, which calls script `rfile.R` in `system.file("exec", package="R.rsp")` iff it exists.  Similarly for `R CMD`, e.g. `R CMD R.rsp::rfile`.  Also, if package is not explicitly specified, the `exec` directory of all packages should be scanned (only for `R CMD`), e.g. `R CMD rfile`.  See also R-devel thread [R CMD <custom>?](https://stat.ethz.ch/pipermail/r-devel/2011-November/062704thread)
+
 * `R CMD check --flavor=<flavor>`: Instead of hard-coded tests as in `R CMD check --as-cran`, support for custom test suits, which themselves could be R packages, e.g. `R CMD check --flavor=CRAN` (R package `check.CRAN`) and `R CMD check --flavor=Bioconductor` `check.Bioconductor`).  In the bigger picture, this will separate R core and CRAN.
 
 * `Rscript -p <n> foo.R` (or `--processes=<n>`) for specifying that a (maximum of) `<n>` cores may be used _including_ the main process.  This would set option `mc.cores` to `<n>-1`, cf. `help('options')`.   As an alternative, evironment variable `R_PROCESSES` can be set. The default is `<n> = 1`.  See also R-devel thread ['SUGGESTION: Environment variable R_MAX_MC_CORES for maximum	number of cores'](https://stat.ethz.ch/pipermail/r-devel/2013-November/067955.html).
