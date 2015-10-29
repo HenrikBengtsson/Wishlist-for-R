@@ -73,7 +73,7 @@ Comment: The `R.utils::dimNA()` function implements this.
 
 * _Support URLs_ in addition to local files when calling `R -f` or `Rscript`, e.g. `Rscript http://callr.org/install#MASS`.
 
-* _Package scripts_ via `Rscript R.rsp::rfile`, which calls script `rfile.R` in `system.file("exec", package="R.rsp")` iff it exists.  Similarly for `R CMD`, e.g. `R CMD R.rsp::rfile`.  Also, if package is not explicitly specified, the `exec` directory of all packages should be scanned (only for `R CMD`), e.g. `R CMD rfile`.  See also R-devel thread [`R CMD <custom>`?](https://stat.ethz.ch/pipermail/r-devel/2011-November/062704thread)
+* _Package scripts_ via `Rscript R.rsp::rfile`, which calls script `rfile.R` in `system.file("exec", package="R.rsp")` iff it exists.  Similarly for `R CMD`, e.g. `R CMD R.rsp::rfile`.  Also, if package is not explicitly specified, the `exec` directory of all packages should be scanned (only for `R CMD`), e.g. `R CMD rfile`.  See also R-devel thread [`R CMD <custom>`?](https://stat.ethz.ch/pipermail/r-devel/2011-November/062704.html)
 
 * `R CMD check --flavor=<flavor>`: Instead of hard-coded tests as in `R CMD check --as-cran`, support for custom test suits, which themselves could be R packages, e.g. `R CMD check --flavor=CRAN` (R package `check.CRAN`) and `R CMD check --flavor=Bioconductor` `check.Bioconductor`).  In the bigger picture, this will separate R core and CRAN.
 
