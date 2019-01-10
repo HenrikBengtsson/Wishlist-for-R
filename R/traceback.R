@@ -21,13 +21,22 @@
 	{}
     else if (is.numeric(x))
     	x <- .Internal(traceback(x))
+    if (is.null(x)) x <- character(0L)
+    class(x) <- c("traceback")	 
     x
 }
 
-traceback <- function(x = NULL, max.lines = getOption("deparse.max.lines"))
+traceback <- function(x = NULL, ...)
 {
-    n <- length(x <- .traceback(x))
-    if(n == 0L)
+    x <- .traceback(x)
+    print(x, ...)
+}
+
+## Add to NAMESPACE: S3method("print", "traceback")
+print.traceback <- function(x, max.lines = getOption("deparse.max.lines"))
+{
+    n <- length(x)
+    if (n == 0L)
         cat(gettext("No traceback available"), "\n")
     else {
         for(i in 1L:n) {
