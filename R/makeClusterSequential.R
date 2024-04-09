@@ -22,7 +22,7 @@ makeClusterSequential <- function() {
 
 #' @export
 print.sequential_cluster <- function(x, ...) {
-  cat(sprintf("A %s cluster with %d node\n", sQuote(class(x)), length(x)))
+  cat(sprintf("A %s cluster with %d node\n", sQuote(class(x)[1]), length(x)))
 }
 
 
